@@ -1,0 +1,194 @@
+@import "variables";
+
+@mixin container {
+  @media (min-width: 1300px) {
+    width: 1250px + (15px * 2);
+  }
+}
+
+@mixin container-sm {
+  @media (min-width: 1300px) {
+    width: 1250px;
+  }
+  @media (max-width: 1299px) {
+    padding-inline: $gutter;
+  }
+}
+
+@mixin header {
+  @media (max-width: 1200px) {
+    #block-exam-main-menu {
+      .menu--main {
+        flex-wrap: wrap;
+        justify-content: center;
+        li a {
+          padding-block: 15px;
+        }
+      }
+    }
+  }
+  @media (max-width: 850px) {
+    #block-social, #block-back {
+      display: none;
+    }
+  }
+  @media (max-width: 767px) {
+    z-index: 5;
+    flex-direction: column;
+    align-items: center;
+    #block-exam-main-menu {
+      .menu--main {
+        flex-direction: column;
+        align-items: center;
+        li {
+          a {
+            padding-block: $gutter;
+          }
+        }
+      }
+    }
+    #block-social {
+      margin-block: $gutter;
+      display: block;
+      margin-inline: auto;
+    }
+    .block-search-form-block {
+      margin-bottom: 60px;
+      margin-inline: auto;
+    }
+  }
+}
+
+@mixin contact {
+  @media (max-width: 639px) {
+    .layout__region--first {
+      order: 1;
+      margin-top: 35px;
+      .form-actions {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .layout__region--second {
+      text-align: center;
+    }
+  }
+}
+
+@mixin services {
+  @media (max-width: 767px) {
+    .block-field-blocknodeservicesbody {
+      width: 80%;
+      margin-inline: auto;
+    }
+  }
+}
+
+@mixin projects {
+  @media (max-width: 1200px) {
+    .views-field-title {
+      span {
+        font-size: 19px;
+        font-weight: 800;
+      }
+    }
+    .views-field-field-services {
+      a {
+        font-size: 15px;
+      }
+    }
+    .views-field-field-img {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    .views-field-title {
+      span {
+        font-size: 30px;
+      }
+    }
+    .views-field-field-services {
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@mixin team {
+  @media (max-width: 1100px) {
+    .views-field-title {
+      span {
+        font-size: 21px;
+      }
+    }
+  }
+}
+
+@mixin news {
+  @media (max-width: 1199px) {
+    .view-filters {
+      margin-bottom: 35px;
+      .views-exposed-form {
+        .form--inline {
+          justify-content: center;
+        }
+      }
+    }
+  }
+  @media (max-width: 620px) {
+    .author-info {
+      flex-direction: column;
+      align-items: center;
+      .views-field-user-picture {
+        margin-bottom: 10px;
+      }
+      .views-field-created-3 {
+        order: -1;
+      }
+      .views-field-uid {
+        &:after {
+          display: none;
+        }
+      }
+    }
+    .view-content .views-row .views-field-fieldset {
+      padding: 20px 10px;
+    }
+    .view-content .views-row .left-content-info {
+      .views-field-created {
+        font-size: 22px;
+        &-1 {
+          font-size: 36px;
+        }
+      }
+    }
+  }
+  @media (max-width: 440px) {
+    .view-content .views-row {
+      flex-direction: column;
+      .views-field-fieldset {
+        margin-left: 0;
+        &-3 {
+          margin-right: 0;
+        }
+      }
+      .right-content-info .author-info, .right-content-info .author-content {
+        border-left: none;
+        text-align: center;
+      }
+      .right-content-info .author-content .views-field-view-node {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@mixin about {
+  @media (max-width: 500px) {
+    display: none;
+  }
+}

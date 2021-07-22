@@ -1,0 +1,14 @@
+@import "variables";
+@import "mixins";
+
+.path-search {
+  .region-content {
+    @include container-sm;
+    margin: auto;
+    .tabs {
+      display: none;
+    }
+    .search-form { a {display: none} }
+    h2 {text-align: center}
+  }
+}

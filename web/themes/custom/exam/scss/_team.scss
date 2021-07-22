@@ -1,0 +1,94 @@
+@import "variables";
+@import "mixins";
+
+.block-views-blockour-team-block-1 {
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  margin-top: 150px;
+  .block-title {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 20px;
+    background-color: white;
+    font-weight: 800;
+    line-height: 1;
+    font-size: 28px;
+    z-index: 1;
+    white-space: nowrap;
+  }
+  .views-field-field-img {
+    img {
+      display: flex;
+      margin: auto;
+    }
+  }
+  .views-field-title {
+    margin-top: 40px;
+    span {
+      font-size: 24px;
+      line-height: 1;
+      color: $black;
+    }
+  }
+  .views-field-field-position {
+    margin-top: 10px;
+    color: $gray;
+    font-size: 14px;
+    line-height: 1;
+  }
+  .views-field-view-node {
+    margin-top: 30px;
+    margin-bottom: 35px;
+    a{
+      color: white;
+      background-color: $black;
+      padding: 10px;
+      text-decoration: none;
+      white-space: nowrap;
+      &:hover {
+        background-color: #222330;
+      }
+    }
+  }
+  .custom-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-inline: auto;
+    max-width: 435px;
+    .flag-like {
+      padding: 0 20px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      a {
+        color: #e84c3d;
+        text-decoration: none;
+        line-height: 1;
+      }
+      .js-flag-message {display: none}
+    }
+    .action-flag {
+      a {font-size: 20px}
+    }
+    .action-unflag {
+      a {font-size: 28px}
+    }
+  }
+  .form-group {
+    @include container-sm;
+    margin-inline: auto;
+    border-top: 1px solid $gray;
+    padding-top: 50px;
+    margin-bottom: 25px;
+    transform: translate(0,-35px);
+  }
+  .views-row {
+    margin-bottom: 60px;
+  }
+  @include team;
+}

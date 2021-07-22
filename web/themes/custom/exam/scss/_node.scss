@@ -1,0 +1,27 @@
+@import "mixins";
+@import "variables";
+
+.full {
+  text-align: justify;
+  img {
+    margin-inline: auto;
+    margin-bottom: 25px;
+  }
+  .field--name-field-services {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .field--name-field-position {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    &2 {
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: $blue;
+    }
+  }
+}

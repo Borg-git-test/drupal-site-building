@@ -1,0 +1,40 @@
+@import "variables";
+@import "mixins";
+
+.block-views-blockclients-block-1 {
+  position: relative;
+  margin-top: 85px;
+
+  .block-title {
+    position: absolute;
+    text-transform: uppercase;
+    text-align: center;
+    top: -35px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 20px;
+    background-color: white;
+    line-height: 1;
+    font-size: 28px;
+    font-weight: 800;
+    z-index: 1;
+  }
+  .form-group {
+    @include container-sm;
+    margin-inline: auto;
+    border-top: 1px solid $gray;
+    padding-top: 60px;
+    margin-bottom: 25px;
+    transform: translate(0,-35px);
+  }
+  .slick-track {
+    display: flex;
+    align-items: center;
+    .slide {
+      img {
+        margin: auto;
+      }
+    }
+  }
+}

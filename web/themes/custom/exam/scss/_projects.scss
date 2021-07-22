@@ -1,0 +1,125 @@
+@import "variables";
+@import "mixins";
+@import "color-taxonomy";
+
+.block-views-blockprojects-block-1 {
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  background: repeating-linear-gradient(-45deg, transparent 0 8px, $gray 9px 10px);
+  margin-top: 135px - 60px;
+
+  .block-title {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 5px;
+    background-color: white;
+    line-height: 1;
+    font-size: 28px;
+    z-index: 1;
+  }
+
+  .view-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .views-field-field-img {
+    img {
+      display: flex;
+      margin: auto;
+    }
+  }
+  .views-field-title {
+    padding-top: 40px;
+    span {
+      font-size: 24px;
+      line-height: 1;
+      color: $black;
+    }
+  }
+  .views-field-field-services {
+    padding-top: 16px;
+    a {
+      line-height: 1;
+      font-size: 16px;
+      text-decoration: none;
+      &[href*="/taxonomy/term/1"] {
+        color: $web-development;
+      }
+      &[href*="/taxonomy/term/2"] {
+        color: $php-development;
+      }
+      &[href*="/taxonomy/term/3"] {
+        color: $app-development;
+      }
+      &[href*="/taxonomy/term/4"] {
+        color: $drupal-project;
+      }
+    }
+  }
+  .views-field-view-node {
+    padding-block: 32px;
+    border-bottom: 1px solid $black;
+    a{
+      color: white;
+      background-color: $black;
+      padding: 10px;
+      text-decoration: none;
+      &:hover {
+        background-color: #222330;
+      }
+    }
+  }
+
+  .views-field {
+    background-color: white;
+  }
+
+  .pager-nav {
+    .pagination {
+      margin-top: 0;
+      margin-bottom: 90px;
+      .pager__item {
+        a {
+          border-radius: 50%;
+          background: inherit;
+          color: $black;
+          border: none;
+          margin-inline: 2px;
+          &:hover {
+            background: #dddcdd;
+            border: none;
+            font-weight: 800;
+          }
+        }
+      }
+      .is-active {
+        a {
+          background: #dddcdd;
+          border: none;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+
+  .form-group {
+    @include container-sm;
+    margin-inline: auto;
+    border-top: 1px solid $gray;
+    padding-top: 110px;
+    transform: translate(0,-35px);
+  }
+
+  .views-row {
+    margin-bottom: 60px;
+    max-width: 500px;
+  }
+
+  @include projects;
+}
