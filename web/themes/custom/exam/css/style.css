@@ -300,8 +300,13 @@ body {
 .footer .region-footer {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
+}
+@media (max-width: 400px) {
+  .footer .region-footer {
+    justify-content: space-around;
+  }
 }
 @media (min-width: 1300px) {
   .footer .container-fluid {
@@ -1022,6 +1027,9 @@ body {
 }
 .path-search .region-content h2 {
   text-align: center;
+}
+.path-search .region-content .search-advanced {
+  display: none;
 }
 
 .full {

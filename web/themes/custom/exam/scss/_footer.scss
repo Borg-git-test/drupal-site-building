@@ -7,8 +7,9 @@
   .region-footer {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+    @include footer;
   }
   .container-fluid {
     @include container;
